@@ -91,7 +91,7 @@ $('h3').text(player1+" it is your turn,pick the column to drop in!")
 
 
 $('.board button').on('click',function(){
-
+  if(game_on === true){
    var col = $(this).closest('td').index();
    var bottomavail = checkBottom(col);
    changeColor(bottomavail,col,currentcolor);
@@ -111,5 +111,5 @@ $('.board button').on('click',function(){
      $('h3').text(currentname+ " its your turn!")
      currentcolor = player2color;
    }
-
+  }
 })
